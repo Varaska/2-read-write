@@ -4,14 +4,14 @@ const fs = require('fs');/* Moduł fs umożliwia interakcję z systemem plików,
 
 const path = require('path')
 
-function saveData(jsonFilePath, folderDaneIWartosc, overwrite) { /* Ma zapiasać dane w formacie JSON do pliku w podanej ściezce, coś jest nie tak ze ściezką */
-  // Powinien odczytać dane z pliku JSON, ale nie odczytuję :(
+function saveData(jsonFilePath, folderDaneIWartosc, overwrite) { /* Juz powinno działać :) */
+  
   const jsonData = fs.readFileSync(path.join(__dirname + '\\jsonFilePath\\' +  jsonFilePath), 'utf8');
   const users = JSON.parse(jsonData);
   // console.log(jsonData)
   // Sprawdź czy folder istnieje
   if (!fs.existsSync(path.join(__dirname, folderDaneIWartosc))) {
-    // Jeśli folder nie istnieje, powinien juz działać albo nie...
+   
     console.log('Folder nie istnieje')
     fs.mkdirSync(path.join(__dirname, folderDaneIWartosc));
   } else if (!overwrite) {
