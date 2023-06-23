@@ -36,3 +36,4 @@ function saveData(jsonFilePath, folderDaneIWartosc, overwrite) { /* Ma zapiasać
 }
 
 module.exports = { saveData };
+
